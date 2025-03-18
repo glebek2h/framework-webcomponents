@@ -1,0 +1,26 @@
+<div class="chat-container">
+  <h2>Angular чат</h2>
+  <div class="messages-container">
+    <div
+      *ngFor="let msg of messages"
+      class="message-container"
+      [ngClass]="{ right: msg.sender === 'Angular', left: msg.sender !== 'Angular' }"
+    >
+      <div>
+        {{ msg.sender }}
+      </div>
+      <div class="message" [ngClass]="{ our: msg.sender === 'Angular' }">
+        {{ msg.message }}
+      </div>
+    </div>
+  </div>
+  <div class="input-container">
+    <input
+      type="text"
+      [(ngModel)]="inputValue"
+      (keyup.enter)="sendMessage()"
+      placeholder="Введите сообщение..."
+    />
+    <button (click)="sendMessage()">Отправить</button>
+  </div>
+</div>

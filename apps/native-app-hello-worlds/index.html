@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Native App</title>
+
+  <style>
+    textarea {
+      height: 300px;
+      width: 600px;
+    }
+
+    .chats {
+      display: flex;
+      justify-content: space-around;
+    }
+  </style>
+</head>
+
+<body>
+  <textarea id="data">
+  </textarea>
+  <div class="chats">
+    <my-react-chat-without-lib>React</my-react-chat-without-lib>
+    <my-angular-chat-without-lib>Angular</my-angular-chat-without-lib>
+  </div>
+
+  <script type="module" src="react-hello-world.js"></script>
+  <script type="module" src="angular-hello-world.js"></script>
+
+  <script src="event-listeners.js"></script>
+</body>
+
+</html>
