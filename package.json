@@ -3,12 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "compile-chats": "npm run compile-react-chat && npm run compile-angular-chat",
-    "compile-react-chat": "nx run react-app:build && npm run update-native-app",
-    "compile-angular-chat": "nx run angular-app:build-single-bundle && npm run update-native-app",
-    "update-native-app": "npm run update-native-app-with-react-chat && npm run update-native-app-with-angular-chat",
-    "update-native-app-with-react-chat": "rm apps/native-app/react-chat.js; cp dist/apps/react-app/main.js apps/native-app/react-chat.js",
-    "update-native-app-with-angular-chat": "rm apps/native-app/angular-chat.js; cp dist/apps/angular-app-single-bundle/main.js apps/native-app/angular-chat.js",
+    "compile-chats": "npm run compile-react-hello-world-without-lib && npm run compile-angular-hello-world-without-lib",
     "compile-react-hello-world-without-lib": "nx run react-hello-world-without-react-to-webcomponent:build && npm run update-native-app-with-react-hello-world-without-lib",
     "update-native-app-with-react-hello-world-without-lib": "rm apps/native-app-hello-worlds/react-hello-world.js; cp dist/apps/react-hello-world-without-react-to-webcomponent/main.js apps/native-app-hello-worlds/react-hello-world.js",
     "compile-angular-hello-world-without-lib": "nx run angular-hello-world-without-elements:build-single-bundle && npm run update-native-app-with-angular-hello-world-without-lib",
